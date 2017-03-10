@@ -1,0 +1,113 @@
+.events
+    max-width: 1200px
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    padding: 40px
+
+    h2
+        margin-top: 20px
+        font-size: 36px
+        font-weight: bold
+        padding-bottom: 27px
+        border-bottom: 1px solid $black
+        font-family: $main_font
+        color: darken($main_dark_color, 10%)
+    .featured-event
+        padding-top: 22px
+        padding-bottom: 22px
+        display: flex
+        flex-direction: column
+        @include breakpoint(medium)
+            flex-direction: row
+        .image
+            width: 100%
+            margin-right: 0
+            margin-bottom: 25px
+            @include breakpoint(medium)
+                width: 60%
+                margin-right: 40px
+                margin-bottom: 25px
+        .details
+            width: 100%
+            @include breakpoint(medium)
+                width: 35%
+                min-width: 245px
+                flex-grow: 2
+            h4
+                font-size: 24px
+                font-weight: bold
+                margin-bottom: 13px
+                font-family: $main_font
+
+                a
+                    color: $black
+            p.date
+                border-top: 1px solid $dark-gray
+                font-size: 20px
+                line-height: 27px
+                margin-bottom: 0
+                padding-top: 7px
+                font-family: $secondary_font
+            p.time
+                border-bottom: 1px solid $dark-gray
+                font-size: 20px
+                line-height: 27px
+                margin-bottom: 0
+                padding-bottom: 7px
+                font-family: $secondary_font
+            p.description
+                font-size: 14px
+                line-height: 20px
+                margin-top: 10px
+                font-family: $secondary_font
+            a.read-more
+                color: $black
+                font-size: 14px
+                font-weight: bold
+                text-decoration: underline
+                font-family: $secondary_font
+    .single-event
+        display: flex
+        border-top: 1px solid $dark-gray
+        
+        .date-display
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center 
+            width: 100px
+            p.number
+                font-size: 30px
+                margin-bottom: 0
+                line-height: 30px
+                font-weight: bold
+                font-family: $main_font
+            p.month
+                font-size: 20px
+                margin-bottom: 0
+                line-height: 30px
+                font-weight: bold
+                text-transform: uppercase
+                font-family: $main_font
+        .event-info
+            h4
+                font-weight: bold
+                font-size: 22px
+                margin: 21px 0 6px 0
+                font-family: $main_font
+                a
+                    color: $black
+            p.date
+                margin: 0
+                font-size: 18px
+                line-height: 26px
+                font-family: $secondary_font
+            p.time
+                margin: 0 0 21px 0
+                font-size: 18px
+                line-height: 26px
+                font-family: $secondary_font
+
+
+

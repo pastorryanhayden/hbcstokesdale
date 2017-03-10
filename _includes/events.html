@@ -1,0 +1,39 @@
+{% if site.data.events[0].Name or site.data.featuredEvents[0].Name %}
+<div class="events">
+  <h2 id="events">Upcoming Events</h2>
+
+  {% for event in site.data.featuredEvents %}
+  <div class="featured-event">
+  <div class="image">
+    {% if event.Featured_Image %}
+    <img src="{{event.Featured_Image[0].url}}" alt="">
+    {% else %}
+    <img src="http://sitesforchurch.s3.amazonaws.com/Pueblo%20Baptst%20Church.jpg" alt="">
+    {% endif %}
+  </div><!--/image-->
+    <div class="details">
+      <h4><a href="{{ event.Name | datapage_url: 'events' | prepend: site.baseurl | prepend: site.url }}">{{event.Name}}</a></h4>
+      <p class="date"><strong>Date:</strong> {{event.Date_Local | date: "%A, %B %-d"}}</p>
+      <p class="time"><strong>Time:</strong> {{event.Date_Local | date: "%I:%M %p"}}</p>
+      <p class="description">
+        {{event.Description}}
+      </p>
+      <a href="{{ event.Name | datapage_url: 'events' | prepend: site.baseurl | prepend: site.url }}" class="read-more">Read More</a>
+    </div><!--/details-->
+  </div><!--/featured-event-->
+  {% endfor %}
+  {% for event in site.data.events %}
+  <div class="single-event">
+      <div class="date-display">
+        <p class="number">{{event.Date_Local | date: "%d"}}</p>
+        <p class="month">{{event.Date_Local | date: "%b"}}</p>
+      </div><!--/date-display-->
+      <div class="event-info">
+        <h4><a href="#">{{event.Name}}</a></h4>
+        <p class="date"><strong>Date:</strong> {{event.Date_Local | date: "%A, %B %-d"}}</p>
+        <p class="time"><strong>Time:</strong> {{event.Date_Local | date: "%I:%M %p"}}</p>
+      </div><!--/event-info-->
+  </div><!--/single-event-->
+  {% endfor %}
+</div><!--/events-->
+{% endif %}

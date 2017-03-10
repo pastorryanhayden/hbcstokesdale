@@ -1,0 +1,23 @@
+---
+layout: events
+---
+{% if  page.featured_image%}
+<img src="{{page.featured_image}}" alt="{{page.title}}" />
+{% else %}
+<img src="{{site.data.settings.default_calendar_image}}" alt="{{page.title}}" />
+{% endif %}
+
+<div class="calendar-details">
+<h1>{{page.title}}</h1>
+<div class="description">{{page.description_markdown | markdownify}}</div>
+<ul>
+    <li><i class="fa fa-calendar"></i> {{page.start_at |  date: "%a, %b %d, %y at %I:%M %P" }}</li>
+    {% if  page.location%}
+    <li><i class="fa fa-map-marker"></i> {{page.location }}</li>
+    {% endif %}
+</ul>
+</div><!--/calendar-details-->
+{{page.page_markdown | markdownify }}
+
+
+

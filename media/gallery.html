@@ -1,0 +1,11 @@
+---
+layout: gallery
+---
+
+        <div id="gallery" style="display:none;">
+            
+            {% for item in site.photo_gallery %}
+            <img alt="{{item.title}}" src="{{item.image_path}}"
+                data-image="{{item.image_path}}">
+            {% endfor %}
+        </div>

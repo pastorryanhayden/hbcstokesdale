@@ -1,0 +1,53 @@
+{% assign settings = site.data.settings %}
+<div class="menulogo">
+    <img src="{{settings.church_logo2_image_path}}" alt="">
+</div><!--/menulogo-->
+<div class="menucontactinfo">
+    <h4>Contact Information</h4>
+    <div class="address">
+        <p>{{ settings.address }} <br>
+        {% if settings.address2 %} {{settings.address2}}<br> {% endif%}
+      {{ settings.City }}, {{ settings.State }} {{ settings.Zip }}</p>
+    </div><!--/address-->
+    <div class="phone">
+        <h5>Phone</h5>
+        <p>{{ settings.phone }}</p>
+    </div><!--/phone-->
+    <div class="email">
+        <h5>Email</h5>
+        <p>{{ settings.church_email }}</p>
+    </div><!--/email-->
+</div><!--/menucontactinfo-->
+<div class="menuservices">
+    <h4>Services</h4>
+    
+    {% assign serv = site.services | sort: 'order' %}
+
+    <h5>Sunday</h5>
+    <p>
+    {% for service in serv %}
+    {% if service.day == 'Sunday' %}
+      {{service.name}} - {{service.time}} <br>
+    {% endif %}
+    {% endfor %}
+    </p>
+    <h5>Wednesday</h5>
+    <p>
+    {% for service in serv %}
+    {% if service.day == 'Wednesday' %}
+      {{service.name}} - {{service.time}} <br>
+    {% endif %}
+    {% endfor %}
+    </p>
+</div><!--/menuservices-->
+<ul class="side-menu">
+  <li><a href="/about_us/leadership.html">Our Leaders</a></li>
+  <li><a href="/about_us/beliefs.html">Statement of Faith</a></li>
+  <li><a href="/about_us/gospel.html">The Gospel</a></li>
+  <li><a href="/events.html">Upcoming Events</a></li>
+  <li class="has-submenu"><a href="#">Media</a></li>
+    <li class="sub"><a href="/media/sermons.html" target="blank">Sermons</a></li>
+    <li class="sub"><a href="/media/blog-list.html">Blog</a></li> 
+    <li class="sub"><a href="/media/gallery.html">Images</a></li>
+</ul><!--/side-menu-->
+

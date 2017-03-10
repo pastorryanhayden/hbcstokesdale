@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{site.data.settings.church_name}}</title>
+    <link rel='stylesheet' href='{{site.url}}/assets/css/unite-gallery.css' type='text/css' /> 
+    <link rel="stylesheet" href="{{site.url}}/new.css">
+    <script src="https://use.fontawesome.com/00d641a760.js"></script>
+  </head>
+  <body class="secondary-page {{page.class}}">
+  <nav id="menu">
+    {% include menu.html %}
+</nav>
+
+<main id="panel">
+  <div class="header">
+    <div class="wrapper">
+    <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+</span></a>
+    </div><!--/wrapper-->
+  </div><!--/header-->
+  <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+  <div class="page-header">
+      <h2>Recent Photos:</h2>
+  </div><!--/page-header-->
+  </div><!--/hero-->
+  <div class="main-content">
+        {{ content }}
+    </div><!--/main-content-->
+
+  {% include footer.html %}
+</main>
+
+          <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
+    <script type='text/javascript' src='{{site.url}}/assets/js/unitegallery.min.js'></script>
+    <script type='text/javascript' src='{{site.url}}/assets/js/ug-theme-tiles.js'></script> 
+    <script>
+    $(document).ready(function(){
+    var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'side': 'right'
+  });
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();});
+
+  $("#gallery").unitegallery(); 
+
+});
+    </script>
+  </body>
+</html>

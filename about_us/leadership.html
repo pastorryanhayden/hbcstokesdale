@@ -1,0 +1,39 @@
+---
+layout: default
+title: Leadership & Staff
+class: leadershipPage
+---
+<div class="aboutContent">
+    <div class="aboutContent__content" id="content">
+
+    <article class="aboutContent__content__content">
+       {% for leader in site.leaders %}
+       {% if  leader.Is_senior_pastor %}
+       <div class="leader senior">
+           <h3>{{leader.Name}}</h3>
+           <h5 class="role">{{leader.Position}}</h5>
+           {% if leader.Thumbnail_path %}
+            <img class="thumbnail" src="{{leader.Thumbnail_path}}" alt="">
+           {% endif %}
+            {{leader.content | truncatewords: 50}}
+            <br>
+            <a href="{{leader.url}}" class="button">Read More</a>
+           <div style="clear: right"></div>
+       </div><!--/senior-pastor-div-->
+       {% else %}
+       <div class="leader">
+           <h3>{{leader.Name}}</h3>
+           <h5 class="role">{{leader.Position}}</h5>
+           {% if leader.Thumbnail_path %}
+            <img class="thumbnail" src="{{leader.Thumbnail_path}}" alt="">
+           {% endif %}
+           {{leader.content | truncatewords: 50}}
+            <br>
+            <a href="{{leader.url}}" class="button">Read More</a>
+           <div style="clear: right"></div>
+       </div><!--/regular leader-div-->
+       {% endif %}
+       {% endfor %}
+    </article>
+    </div><!--/main-content-->
+</div><!--/about-content-->

@@ -1,0 +1,59 @@
+---
+layout: default
+alt-title: '<span>Our Sermons</span>'
+---
+
+<div class="sermonslistContent">
+    <div class="sermonslistContent__MainList">
+        <h2>All Sermons:</h2>
+    {% for sermon in site.sermons %}
+        <div class="sermonslistItem">
+            <div class="sermonslistItem__thumbnail">
+            {% assign sermon_series = site.series | where: "slug", sermon.sery %}   
+            {% assign speaker = site.speakers | where: "slug", sermon.speaker %}   
+            {% for sery in sermon_series %}
+                    <img src="{{sery.featured_image}}" alt="{{sery.title}}">
+            {% endfor %}
+            
+            
+            
+                
+            
+                    
+            </div><!--/sermonslistitem__thumbnail-->
+            <div class="sermonslistItem__teaser">
+            <div class="sermonslistItem__title">
+                <h3><a href="{{ sermon.url }}">{{sermon.sermon_name}}</a></h3>
+                <ul class="action__buttons">
+                    {% if sermon.sermon_path %}
+                    <li><a href="{{sermon.sermon_path}}" alt="play"><i class="fa fa-play"></i></a></li>
+                    {% endif %}
+                    {% if sermon.handout_path %}
+                    <li><a href="{{sermon.handout_path}}" alt="handout"><i class="fa fa-file-pdf-o"></i></a></li>
+                    {% endif %}
+                    {% if sermon.slides_path %}
+                    <li><a href="{{sermon.slides_path}}" alt="slides"><i class="fa fa-file-powerpoint-o"></i></a></li>
+                    {% endif %}
+                </ul><!--/action__buttons-->
+                </div><!--/sermonslistItem__title-->
+                <ul class="sermonslistItem__tagline">
+                <li><i class="fa fa-calendar"></i> {{sermon.preached_date | date: "%b %d, %y" }}</li>
+                <li><i class="fa fa-clock"></i> {{sermon.service}}</li>
+                <li><i class="fa fa-user"></i> {% for sp in speaker %}{{sp.name}}{%endfor%}</li>
+                <li><i class="fa fa-book"></i> {{sermon.bible_text}}</li>
+                </ul>
+                <p class="sermonslistItem__description">{{sermon.sermon_content_markdown |truncatewords: 15}}</p>
+                {% if sermon.sermon_path %}
+                <audio class="sermonslistPlayer" controls>
+                    <source src="{{sermon.sermon_path}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                <a href="{{sermon.sermon_path}}" class="button secondary" target="blank" download><i class="fa fa-download"></i> Download</a>
+
+                {% endif %}
+                <a href="{{ sermon.url }}" class="button" >View Sermon</a>
+            </div><!--/sermonslistItem__teaser-->
+        </div><!--/sermonslistItem-->
+     {% endfor %}
+    </div><!--/end main list-->
+</div><!--/sermonslistContent-->

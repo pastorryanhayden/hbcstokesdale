@@ -1,0 +1,42 @@
+.main-plug
+    padding: 50px
+    text-align: center
+    background-color: $main_light_color
+    p:first-child
+        margin-bottom: 50px
+        font-size: 18px
+        font-weight: 28px
+        color: $medium-gray 
+        max-width: 80%
+        margin-right: auto 
+        margin-left: auto
+    h2
+        font-weight: 900
+        font-size: 42px
+        line-height: 59px 
+        color: $primary-color
+        margin-bottom: 50px
+    .hero-sections
+        display: flex 
+        justify-content: space-between
+        max-width: 80%
+        margin-right: auto 
+        margin-left: auto
+        flex-direction: column 
+        @include breakpoint(medium)
+            flex-direction: row
+            flex-wrap: wrap
+            align-content: center  
+        .section
+            padding: 20px
+            width: 230px 
+            h3 
+                font-weight: bold 
+                color: lighten($main_dark_color, 10%)
+                font-size: 27px
+                text-align: center  
+            p 
+                text-align: justify
+                font-size: 16px
+                font-weight: 25px
+                color: $medium-gray  

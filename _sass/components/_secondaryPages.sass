@@ -1,0 +1,80 @@
+body.secondary-page
+    .hero
+        height: 368px
+        max-height: 368px
+        min-height: 350px
+        z-index: 0
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        color: $white
+        padding-bottom: 0 
+        @include breakpoint(medium)
+            padding-bottom: 0
+            min-height: 368px
+        .page-header
+            background: rgba(255,255,255, .8)
+            border-top: 2px solid #B75433
+            border-bottom:  2px solid #B75433
+            height: 69px
+            h2
+                width: 85%
+                max-width: 960px
+                margin-right: auto
+                margin-left: auto 
+                color: #665A4E
+                font-size: 30px
+                line-height: 69px
+                font-family: $secondary_font
+                span
+                    font-weight: bold 
+                    color: #C66942
+                    font-family: $main_font
+    .main-content
+        width: 85%
+        max-width: 960px
+        margin-right: auto
+        margin-left: auto 
+        padding: 40px
+
+        h2, h3, h4, h5, h6
+            font-family: $secondary_font
+            color: $main_bright_color
+        
+        img.leaderthumb
+            display: block 
+            max-width: 400px
+            border-radius: 1000px
+            margin-left: auto 
+            margin-right: auto
+            margin-bottom: 20px
+
+        ul.social-menu
+            width: 300px
+            display: flex
+            margin-left: auto
+            margin-right: auto
+            justify-content: space-around
+            list-style-type: none
+            margin-bottom: 40px
+            li 
+                width: 40px
+                line-height: 40px
+                height: 40px
+                padding: 0
+                flex-shrink: 0
+                margin: 0
+                a 
+                    width: 40px
+                    height: 40px
+                    line-height: 40px 
+                    img
+                        max-width: 100%
+                        border-radius: 0
+                        margin: 0
+                        width: 40px
+                        height: 40px
+                        text-align: center  
+
+
+

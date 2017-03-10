@@ -1,0 +1,22 @@
+---
+layout: default
+title: Our Beliefs
+class: beleifsPage
+---
+
+{% assign beliefs = site.beliefs | sort: "order" %}
+
+<div class="aboutContent">
+    <div class="aboutContent__content" id="content">
+    <article class="aboutContent__content__content">
+    <div class="beliefs row small-up-1 medium-up-2">
+       {% for item in beliefs %} 
+       <div class="belief column">
+        <h3><i class="fa {{item.icon}}"></i> {{item.title}}</h3>
+            {{item.content }}
+        </div><!--/belief-->
+       {% endfor %}
+         </div><!--/beliefs-->
+    </article>
+    </div><!--/main-content-->
+</div><!--/about-content-->

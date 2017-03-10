@@ -1,0 +1,24 @@
+{% assign settings = site.data.settings %}
+<div class="footer">
+  <div class="text">
+      <h4>Contact Us</h4>
+      <h5>By Mail:</h5>
+      <p>{{ settings.address }} <br>
+        {% if settings.address2 %} {{settings.address2}}<br> {% endif%}
+      {{ settings.City }}, {{ settings.State }} {{ settings.Zip }}</p>
+      <h5>By Phone:</h5>
+      <p>{{ settings.phone }}</p>
+      <h5>By Email:</h5>
+      <p>{{ settings.church_email }}</p>
+  </div><!--/text-->
+</div><!--/footer-->
+<div class="second-footer">
+  <ul class="menu">
+    <li><a href="#panel"> <i class="fa fa-angle-double-up"></i>Top</a></li>
+    <li><a href="#">Plan A Visit</a></li>
+    <li><a href="#">The Gospel</a></li>
+    <li><a href="#">Statement of Faith</a></li>
+    <li><a href="#">Manage</a></li>
+  </ul><!--/menu-->
+  <p class="copyright"> <a href="http://sitesfor.church"> &copy;Sitesfor.church/Myonepage.site</a></p>
+</div><!--/second-footer-->

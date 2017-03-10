@@ -1,0 +1,14 @@
+main_dark_color: '#1A2E3D'
+main_light_color: '#e8e4db'
+main_bright_color: '#8F1A1E'
+secondary_bright_color: '#FCD72C'
+main_font: "'Roboto', sans-serif"
+main_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');"
+secondary_font: 
+secondary_font_import_code: 
+
+_comments:
+  main_font: "i.e. 'Playfair Display', serif - IMPORTANT - leave off the 'font-family' and the trailing semi-colon!"
+  main_font_import_code: "i.e. @import url('https://fonts.googleapis.com/css?family=Playfair+Display'); - IMPORTANT - INCLUDE the trailing-semicolon!"
+  secondary_font: "i.e. 'Raleway', serif - IMPORTANT - leave off the 'font-family' and the trailing semi-colon!"
+  secondary_font_import_code: "i.e. @import url('https://fonts.googleapis.com/css?family=Raleway'); - IMPORTANT - INCLUDE the trailing-semicolon!"

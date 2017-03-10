@@ -1,0 +1,13 @@
+---
+---
+[
+{% for a in site.events %}
+{
+    "title": "{{a.title}}",
+    "start": "{{a.start_at}}",
+    "end": "{{a.end_at}}",
+    "url": "{{a.url}}",
+    "allDay": "{{a.all_day}}"
+},
+{% endfor %}
+]

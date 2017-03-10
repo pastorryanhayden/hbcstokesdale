@@ -1,0 +1,19 @@
+{%assign name = site.data.settings.church_name | replace: ' ', '+'%}
+{%assign address = site.data.settings.address | replace: ' ', '+'%}
+{%assign address2 = site.data.settings.address2 | replace: ' ', '+'%}
+{%assign city = site.data.settings.City | replace: ' ', '+'%}
+{%assign state = site.data.settings.State %}
+{%assign zip = site.data.settings.Zip %}
+{%assign lattitude = site.data.settings.lattitude %}
+{%assign longitude = site.data.settings.longitude %}
+{% assign zoom = site.data.settings.map_zoom_level %}
+{%assign main_bright_color = site.data.design_settings.main_bright_color | remove_first: "#"%}
+{%assign main_light_color = site.data.design_settings.main_light_color |remove_first: "#" %}
+
+<div class="map" style="background: url('http://maps.googleapis.com/maps/api/staticmap?center={{address}}+{{address2}}+{{city}},+{{state}}+{{zip}}&zoom={{zoom}}&size=650x210&scale=2&maptype=roadmap&markers=color:0x{{main_bright_color}}%7Clabel:{{name}}%7C{{lattitude}},{{longitude}}&style=feature:landscape|color:0x{{main_light_color}}&key=AIzaSyAT6P5hzf4ZOot52MYALY7YkyhDrc29Bc4') no-repeat center center; background-size: cover;">
+
+
+<a href="https://www.google.com/maps/place/{{name}},+{{address}},+{{address2}}+{{city}},+{{state}}+{{zip}}/@{{lattitude}},{{longitude}},17z" class="button large" target="blank"><i class="fa fa-map-marker"></i>  View on Google Maps</a>
+
+
+</div><!--/map-->
