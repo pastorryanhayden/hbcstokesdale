@@ -3,6 +3,23 @@ layout: home
 first_header_image: uploads/header1.jpeg 
 second_header_image: uploads/header2.jpeg
 third_header_image: uploads/header3.jpeg
+gallery:
+  -
+    gallery_image: uploads/IMG_0392.jpeg
+  -
+    gallery_image: uploads/IMG_0395.jpeg
+  -
+    gallery_image: uploads/IMG_0425.jpeg
+  -
+    gallery_image: uploads/IMG_0441.jpeg
+  -
+    gallery_image: uploads/IMG_0444.jpeg
+  -
+    gallery_image: uploads/IMG_0446.jpeg
+  -
+    gallery_image: uploads/IMG_0475.jpeg
+  -
+    gallery_image: uploads/IMG_0481.jpeg
 ---
 {% assign settings = settings.data.settings %}
 <nav id="menu">
@@ -92,8 +109,8 @@ third_header_image: uploads/header3.jpeg
   {% include map.html %}
   <div class="photos">
   <div class="photos-inner" id="sqr-gallery">
-     {% for img in site.photo_gallery limit: 12 %}
-        <div class="photo"><a href="#" data-featherlight="{{img.image_path}}" style="background: url({{img.image_path }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
+     {% for img in page.gallery limit: 12 %}
+        <div class="photo"><a href="#" data-featherlight="{{img.gallery_image}}" style="background: url({{img.gallery_image }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
       {% endfor %}
   </div><!--/photos-inner-->
 </div><!--/gallery-->
