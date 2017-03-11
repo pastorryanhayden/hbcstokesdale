@@ -10,7 +10,7 @@ require 'active_support/all'
 
 # Sermons
 
-@table = @client.table("appY0AQmIj93tBa2P", "series")
+@table = @client.table("appCXkr9U5TgyOsrU", "series")
 @records = @table.records(:filterByFormula => "published", :sort => ["sermon_date", :desc], :limit => 100)
 
 File.open("_data/series.json", "w") do |f|
