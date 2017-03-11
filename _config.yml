@@ -26,7 +26,15 @@ keep_files:
   - assets/css
   - assets/js
 
-
+page_gen:
+  - data: 'series'
+    template: 'series'
+    name: 'title'
+    dir: 'series'
+  - data: 'sermons'
+    template: 'sermon'
+    name: 'title'
+    dir: 'sermons'
 
 
 
@@ -38,18 +46,6 @@ collections:
   photo_gallery:
     output: false
     _hide_content: true
-  services:
-    output: false
-    _hide_content: true
-  sermons:
-    output: true
-    _hide_content: true 
-  series:
-    output: true
-    _hide_content: true 
-  speakers: 
-    output: false
-    _hide_content: true 
   beliefs:
     output: false
   events:

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{site.url}}/new.css">
     <script src="https://use.fontawesome.com/00d641a760.js"></script>
   </head>
-  <body class="secondary-page leaders">
+  <body class="secondary-page {{page.class}}">
   <nav id="menu">
     {% include menu.html %}
 </nav>
@@ -26,19 +26,10 @@
   </div><!--/header-->
   <div class="hero" style="background: url({{site.data.settings.main_image}})center center;">
   <div class="page-header">
-      <h2><span>Our Leaders:</span> {{page.Name}}</h2>
+      <h2><span>Sermons:</span></h2>
   </div><!--/page-header-->
   </div><!--/hero-->
   <div class="main-content">
-        <img  class="leaderthumb" src="{{ page.Thumbnail_path }}" alt="{{page.Name}}" />
-        <ul class="social-menu">
-    {% if  page.Twitter %}
-    <li><a href="page.twitter"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt="" /></a></li>{% endif %}
-    {% if  page.Facebook %}
-    <li><a href="page.facebook"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt="" /></a></li>{% endif %}
-    {% if  page.Email %}
-    <li><a href="page.email"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt="" /></a></li>{% endif %}
-  </ul>  
         {{ content }}
     </div><!--/main-content-->
 
