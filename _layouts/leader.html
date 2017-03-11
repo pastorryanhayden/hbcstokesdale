@@ -17,7 +17,7 @@
 <main id="panel">
   <div class="header">
     <div class="wrapper">
-    <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+    <h1><a href="{{site.url}}/"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
     <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
   <i class="fa fa-circle fa-stack-2x"></i>
   <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
@@ -33,11 +33,11 @@
         <img  class="leaderthumb" src="{{ page.Thumbnail_path }}" alt="{{page.Name}}" />
         <ul class="social-menu">
     {% if  page.Twitter %}
-    <li><a href="page.twitter"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{page.twitter}}"><img src="{{site.url}}/uploads/twitter.png" alt="" /></a></li>{% endif %}
     {% if  page.Facebook %}
-    <li><a href="page.facebook"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{page.facebook}}"><img src="{{site.url}}/uploads/facebook.png" alt="" /></a></li>{% endif %}
     {% if  page.Email %}
-    <li><a href="page.email"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{page.email}}"><img src="{{site.url}}/uploads/email.png" alt="" /></a></li>{% endif %}
   </ul>  
         {{ content }}
     </div><!--/main-content-->

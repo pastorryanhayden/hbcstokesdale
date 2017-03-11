@@ -91,11 +91,11 @@ main_image: /uploads/background3.jpg
   <h3>{{leader.Name}}</h3>
   <ul class="social-menu">
     {% if  leader.Twitter %}
-    <li><a href="leader.twitter"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{leader.twitter}}"><img src="uploads/twitter.png" alt="" /></a></li>{% endif %}
     {% if  leader.Facebook %}
-    <li><a href="leader.facebook"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{leader.facebook}}"><img src="uploads/facebook.png" alt="" /></a></li>{% endif %}
     {% if  leader.Email %}
-    <li><a href="leader.email"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt="" /></a></li>{% endif %}
+    <li><a href="{{leader.email}}"><img src="uploads/email.png" alt="" /></a></li>{% endif %}
   </ul>  
   {{ leader.content | truncatewords: 40 }}
   <br />
