@@ -20,25 +20,71 @@
 </div><!--/menucontactinfo-->
 <div class="menuservices">
     <h4>Services</h4>
-    
-    {% assign serv = site.services | sort: 'order' %}
 
+    {% assign sunday = site.data.settings.services | where: "day", "Sunday" %}
+    {% if sunday[0].time %}
     <h5>Sunday</h5>
     <p>
-    {% for service in serv %}
-    {% if service.day == 'Sunday' %}
+    {% for service in sunday %}
       {{service.name}} - {{service.time}} <br>
-    {% endif %}
     {% endfor %}
     </p>
+    {% endif %}
+    {% assign monday = site.data.settings.services | where: "day", "Monday" %}
+    {% if monday[0].time %}
+    <h5>Monday</h5>
+    <p>
+    {% for service in monday %}
+      {{service.name}} - {{service.time}} <br>
+    {% endfor %}
+    </p>
+    {% endif %}
+    {% assign tuesday = site.data.settings.services | where: "day", "Tuesday" %}
+    {% if tuesday[0].time %}
+    <h5>Tuesday</h5>
+    <p>
+    {% for service in tuesday %}
+      {{service.name}} - {{service.time}} <br>
+    {% endfor %}
+    </p>
+    {% endif %}
+    {% assign wednesday = site.data.settings.services | where: "day", "Wednesday" %}
+    {% if wednesday[0].time %}
     <h5>Wednesday</h5>
     <p>
-    {% for service in serv %}
-    {% if service.day == 'Wednesday' %}
+    {% for service in wednesday %}
       {{service.name}} - {{service.time}} <br>
-    {% endif %}
     {% endfor %}
     </p>
+    {% endif %}
+    {% assign thursday = site.data.settings.services | where: "day", "Thursday" %}
+    {% if thursday[0].time %}
+    <h5>Thursday</h5>
+    <p>
+    {% for service in thursday %}
+      {{service.name}} - {{service.time}} <br>
+    {% endfor %}
+    </p>
+    {% endif %}
+    {% assign friday = site.data.settings.services | where: "day", "Friday" %}
+    {% if friday[0].time %}
+    <h5>Friday</h5>
+    <p>
+    {% for service in friday %}
+      {{service.name}} - {{service.time}} <br>
+    {% endfor %}
+    </p>
+    {% endif %}
+    {% assign saturday = site.data.settings.services | where: "day", "Saturday" %}
+    {% if saturday[0].time %}
+    <h5>Saturday</h5>
+    <p>
+    {% for service in saturday %}
+      {{service.name}} - {{service.time}} <br>
+    {% endfor %}
+    </p>
+    {% endif %}
+
 </div><!--/menuservices-->
 <ul class="side-menu">
   <li><a href="/about_us/leadership.html">Our Leaders</a></li>

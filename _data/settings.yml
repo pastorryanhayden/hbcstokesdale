@@ -1,21 +1,36 @@
-church_name: Hartwell Baptist Church
-church_logo_image_path: /assets/img/logo.jpg
-church_logo2_image_path: /assets/img/logo.jpg
+church_name: Heritage Baptist Church
+church_logo_image_path: /uploads/logo.png
+church_logo2_image_path: /uploads/logo2.jpg
 main_image: /uploads/background3.jpg
 phone: (513) 761-1434
 church_email: pastortaylorhbc@yahoo.com
-facebook: 'https://www.facebook.com/hartwellbaptistchurch'
-twitter: 'https://twitter.com/DrKeithTaylorSr'
+facebook: 'https://www.facebook.com/heritagebaptistchurchstokesdale/'
+twitter: 
 youtube:
-address: 8222 Monon Avenue
+address: 8430 Southard Rd
 address2:
-City: Cincinnati
-State: OH
-Zip: '45216'
+City: Stokesdale
+State: NC
+Zip: '27357'
 main_blog_image: /uploads/1.jpg
 main_sermon_image: /uploads/2.jpg
 default_calendar_image: /uploads/hartwell.jpg
-lattitude: '39.210653'
-longitude: '-84.472477'
-map_zoom_level: 14
+services:
+  -
+    name: Sunday School
+    time: 10am
+    day: Sunday
+  - 
+    name: Morning Worship
+    time: 11am
+    day: Sunday
+  -
+    name: Bible Study
+    time: 7pm
+    day: Wednesday
+
+
+lattitude: '36.246743'
+longitude: '-79.949284'
+map_zoom_level: 13
 Google_calendar_id: leonhart4@gmail.com

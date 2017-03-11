@@ -1,11 +1,13 @@
-main_dark_color: '#1A2E3D'
-main_light_color: '#e8e4db'
-main_bright_color: '#8F1A1E'
-secondary_bright_color: '#FCD72C'
-main_font: "'Roboto', sans-serif"
-main_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');"
-secondary_font: 
-secondary_font_import_code: 
+main_dark_color: '#08070A'
+main_light_color: '#F3E3D5'
+main_bright_color: '#0A1D52'
+secondary_bright_color: '#026F9F'
+main_font: "'Lora', serif"
+main_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700');"
+# main_font: "'Arvo', serif"
+# main_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700');"
+secondary_font: "'Open Sans', sans-serif"
+secondary_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700');"
 
 _comments:
   main_font: "i.e. 'Playfair Display', serif - IMPORTANT - leave off the 'font-family' and the trailing semi-colon!"

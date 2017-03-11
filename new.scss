@@ -4,17 +4,16 @@
 
 @charset 'utf-8';
 
-{{site.data.design_settingsmain_font_import_code}}
-{% if site.data.design_settings.secondary_font_import_code %}
-{{site.data.design_settings.secondary_font_import_code}}
-{% endif %}
+{{main_font_import_code}}
+{{secondary_font_import_code}}
+
 
 $main_dark_color: {{site.data.design_settings.main_dark_color}};
 $main_light_color: {{site.data.design_settings.main_light_color}};
 $main_bright_color: {{site.data.design_settings.main_bright_color}};
 $secondary_bright_color: {{site.data.design_settings.secondary_bright_color}};
 $main_font: {{site.data.design_settings.main_font}};
-$secondary_font: {% if site.data.design_settings.secondary_font %}{{site.data.design_settings.secondary_font}};{% else %}{{site.data.design_settings.main_font}};{% endif %}
+$secondary_font: {{site.data.design_settings.secondary_font}};
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
@@ -101,8 +100,7 @@ $header-font-style: normal;
 @import "components/gallery"; 
 @import "components/events"; 
 @import "components/eventpage"; 
-@import "components/sermons"; 
-@import "components/main-plug"; 
+@import "components/sermons";  
 @import "components/secondaryPages"; 
 @import "components/leadership"; 
 @import "components/beliefs"; 
