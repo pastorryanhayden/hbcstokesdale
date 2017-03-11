@@ -46,8 +46,6 @@ collections:
   photo_gallery:
     output: false
     _hide_content: true
-  beliefs:
-    output: false
   events:
     output: true
     _hide_content: true
