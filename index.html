@@ -1,6 +1,8 @@
 ---
 layout: home
-main_image: /uploads/background3.jpg
+first_header_image: uploads/header1.jpeg 
+second_header_image: uploads/header2.jpeg
+third_header_image: uploads/header3.jpeg
 ---
 {% assign settings = settings.data.settings %}
 <nav id="menu">
@@ -10,7 +12,7 @@ main_image: /uploads/background3.jpg
 <main id="panel">
   <div class="header">
     <div class="wrapper">
-    <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+    <h1><a href="{{site.url}}/"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
     <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
   <i class="fa fa-circle fa-stack-2x"></i>
   <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
@@ -19,6 +21,23 @@ main_image: /uploads/background3.jpg
   </div><!--/header-->
   <div class="hero" style="background: url(uploads/wood.png) center center; ">
       <div class="main-heading">
+      <div class="heading-images">
+        <div class="image1 header_image">
+          <div class="inner-image" style="background: url({{page.first_header_image}}) no-repeat center center; background-size: cover;">
+            
+          </div><!--/inner-image-->
+        </div><!--/image1-->
+        <div class="image2 header_image">
+          <div class="inner-image" style="background: url({{page.second_header_image}}) no-repeat center center; background-size: cover;">
+            
+          </div><!--/inner-image-->
+        </div><!--/image1-->
+        <div class="image3 header_image">
+          <div class="inner-image" style="background: url({{page.third_header_image}}) no-repeat center center; background-size: cover;">
+            
+          </div><!--/inner-image-->
+        </div><!--/image1-->
+      </div><!--/heading-images-->
       <h1 class="editable">A Place To Call Home</h1>
       <p class="editable">If you live in the Stokesdale area we invite you join us for worship and fellowship as we focus our attention on the Word of God. </p>
       <a href="#" class="hollow button">Plan A Visit</a>
@@ -26,7 +45,7 @@ main_image: /uploads/background3.jpg
   </div><!--/hero-->
   <div class="plan-a-visit">
     <h2>Plan A Visit</h2>
-    <p>Visiting a new church can be an intimidating experience.  We want to put you at ease by answering the most common questions people have….</p>
+    <p class="editable">Visiting a new church can be an intimidating experience.  We want to put you at ease by answering the most common questions people have….</p>
     <div class="row small-up-1 medium-up-2 visit-sections">
       <div class="column section editable"><h3>What are Sunday worship services like?</h3><p>After a time of fellowship, we start our service with prayer. As a congregation we sing hymns and choruses. There is special music offered to the Lord as worship.  We take up an offering (visitors are not expected to give) and then the pastor or a special speaker will preach from the Scriptures.</p></div><!--/column-->
       <div class="column section editable">

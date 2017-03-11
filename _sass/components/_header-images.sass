@@ -1,0 +1,51 @@
+.heading-images
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 40px
+    margin-top: 40px
+    display: flex 
+    justify-content: center
+    align-items: center 
+    flex-direction: column
+    max-height: 250px
+    +breakpoint(medium)
+        flex-direction: row 
+        
+    
+    .header_image
+        background-color: #ffffff
+        min-height: 235px
+        width: 235px
+        padding: 20px
+        position: relative
+        -webkit-box-shadow: 0 10px 6px -6px #777
+        -moz-box-shadow: 0 10px 6px -6px #777
+        box-shadow: 0 10px 6px -6px #777
+
+        .inner-image
+            position: absolute
+            top: 15px
+            left: 15px
+            right: 15px
+            bottom: 15px
+        &.image1
+            -ms-transform: rotate(7deg)
+            -webkit-transform: rotate(7deg)
+            transform: rotate(7deg)
+            display: none 
+            +breakpoint(medium)
+                display: block
+        &.image2
+            -ms-transform: rotate(-4deg)
+            -webkit-transform: rotate(-4deg)
+            transform: rotate(-4deg)
+            width: 260px
+        &.image3
+            -ms-transform: rotate(5deg)
+            -webkit-transform: rotate(5deg)
+            transform: rotate(5deg)
+            display: none 
+            +breakpoint(medium)
+                display: block
+
