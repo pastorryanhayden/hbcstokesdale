@@ -50,8 +50,7 @@ collections:
     output: true
     _hide_content: true
   newsletters:
-    output: false
-    _hide_content: true
+    output: true
   ministries:
     output: true
   ministry_leaders:
