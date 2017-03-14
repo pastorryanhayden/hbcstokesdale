@@ -98,6 +98,8 @@
     {% if  site.posts[0].title %}
     <li class="sub"><a href="/media/blog-list.html">Blog</a></li> 
     {% endif %}
-    <li class="sub"><a href="/media/gallery.html">Images</a></li>
+    {% if  site.newsletters[0].title %}
+    <li class="sub"><a href="/media/newsletters.html">Newsletters</a></li>
+    {% endif%}
 </ul><!--/side-menu-->
 
