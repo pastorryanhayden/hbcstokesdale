@@ -1,5 +1,5 @@
 ---
 title:
 date:
-featured_image:
+document:
 ---

@@ -1,0 +1,12 @@
+---
+layout: default
+alt-title: '<span>Recent Newsletters</span>'
+---
+
+<p class="editable">Below you'll find all of our recent monthly newsletters.</p>
+
+<ul class="newsletters">
+    {% for letter in site.newsletters %}
+    <li><a href="{{letter.document}}" target="blank">{{letter.title}}</a><br>Posted on {{letter.date | date: "%a, %b %d, %y"}}.</li>
+    {% endfor %}
+</ul><!--/newsletters-->
