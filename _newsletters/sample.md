@@ -1,5 +1,6 @@
 ---
 title: Sample
+layout: newsletter
 published_date: 2017-03-12 00:00:00
 ---
 
