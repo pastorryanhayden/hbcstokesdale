@@ -1,5 +1,5 @@
 ---
 title:
-date:
+published_date:
 document:
 ---
