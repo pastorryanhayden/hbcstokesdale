@@ -1,5 +1,5 @@
 ---
 title: Sample
 published_date:
-document:
+document: /uploads/psalm-38-handout.pdf
 ---
