@@ -83,7 +83,7 @@ plan_a_visit:
     <p class="editable">Visiting a new church can be an intimidating experience.  We want to put you at ease by answering the most common questions people have….</p>
     <div class="row small-up-1 medium-up-2 visit-sections">
       {% for section in page.plan_a_visit%}
-      <div class="column section editable"><h3>{{section.heading}}</h3> {{section.text_markdown | markdownify}}</div><!--/column-->
+      <div class="column section"><h3>{{section.heading}}</h3> {{section.text_markdown | markdownify}}</div><!--/column-->
       {% endfor %}
     </div><!--/row small-up etc.-->
   </div><!--/plan-a-visit-->
