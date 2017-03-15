@@ -18,7 +18,7 @@ Our sins have separated us from God.
 
 > *“For all have sinned, and come short of the glory of God.”* Romans 3:23
 
-God made man in His own image. He gave man the ability to choose right from wrong. We  choose to sin. Our sins keep us from God.
+God made man in His own image. He gave man the ability to choose right from wrong. We choose to sin. Our sins keep us from God.
 
 God’s Word Also Says That Sin Must Be Paid For
 
@@ -35,10 +35,6 @@ All of our sins were laid on Christ on the cross. He paid our sin debt for us. T
 ### We Must Personally Pray And Receive Christ By Faith
 
 The Bible says, *“For whosoever shall call upon the name of the Lord shall be saved.”* Romans 10:13
-
-### Pray And Receive Christ As Your Savior
-
-Lord, I know that I am a sinner. If I died today, I would not go to heaven. Forgive my sin, come into my life and be my Savior. Help me live for you from this day forward. In Jesus’ Name, Amen.
 
 The Bible says, *“For whosoever shall call upon the name of the Lord shall be saved.”* Romans 10:13
 
