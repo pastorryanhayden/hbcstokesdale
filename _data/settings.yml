@@ -2,10 +2,10 @@ church_name: Heritage Baptist Church
 church_logo_image_path: /uploads/logo.png
 church_logo2_image_path: /uploads/logo2.jpg
 main_image: /uploads/wood.png
-phone: (513) 761-1434
+phone: (336) 423-6031
 church_email: jmriddle1983@gmail.com
 facebook: 'https://www.facebook.com/heritagebaptistchurchstokesdale/'
-twitter: 
+twitter:
 youtube:
 address: 8430 Southard Rd
 address2:
@@ -16,20 +16,15 @@ main_blog_image: /uploads/1.jpg
 main_sermon_image: /uploads/2.jpg
 default_calendar_image: /uploads/hartwell.jpg
 services:
-  -
-    name: Sunday School
-    time: 10am
+  - name: Sunday School
+    time:
     day: Sunday
-  - 
-    name: Morning Worship
-    time: 11am
+  - name: Morning Worship
+    time:
     day: Sunday
-  -
-    name: Bible Study
-    time: 7pm
+  - name: Bible Study
+    time:
     day: Wednesday
-
-
 lattitude: '36.246743'
 longitude: '-79.949284'
 map_zoom_level: 13
