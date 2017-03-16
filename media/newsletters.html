@@ -8,6 +8,6 @@ alt-title: '<span>Recent Newsletters</span>'
 <ul class="newsletters">
     {% assign sorted = (site.newsletters | sort: 'published_date') | reverse %}
     {% for letter in sorted %}
-    <li><a href="{{letter.url}}">{{letter.title}}</a><br>Posted on {{letter.published_date | date: "%a, %b %d, %y"}}.</li>
+    <li><a href="{{letter.document}}" target="blank">{{letter.title}}</a><br>Posted on {{letter.published_date | date: "%a, %b %d, %y"}}.</li>
     {% endfor %}
 </ul><!--/newsletters-->
