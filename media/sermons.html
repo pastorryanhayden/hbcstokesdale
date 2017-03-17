@@ -28,12 +28,12 @@ alt-title: '<span>Our Sermons</span>'
                     {% endif %}
                     {% if sermon.manuscript %}
                     {% for item in sermon.manuscript %}
-                    <li><a href="{{item.url}}" alt="handout"><i class="fa fa-page-pdf"></i></a></li>
+                    <li><a href="{{item.url}}" alt="handout"><i class="fa fa-file-pdf-o"></i></a></li>
                     {% endfor %}
                     {% endif %}
                     {% if sermon.slides %}
                     {% for item in sermon.slides %}
-                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-projection-screen"></i></a></li>
+                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-file-powerpoint-o"></i></a></li>
                     {% endfor %}
                     {% endif %}
                 </ul><!--/action__buttons-->

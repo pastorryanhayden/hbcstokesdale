@@ -51,12 +51,12 @@
                     {% endif %}
                     {% if page.handout %}
                     {% for item in page.manuscript %}
-                    <li><a href="{{item.manuscript}}" alt="handout"><i class="fa fa-page-pdf"></i></a></li>
+                    <li><a href="{{item.manuscript}}" alt="handout"><i class="fa fa-file-pdf-o"></i></a></li>
                     {% endfor %}
                     {% endif %}
                     {% if page.slides %}
                     {% for item in page.slides %}
-                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-projection-screen"></i></a></li>
+                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-file-powerpoint-o"></i></a></li>
                     {% endfor %}
                     {% endif %}
                 </ul><!--/action__buttons-->
@@ -82,7 +82,7 @@
 {% if page.manuscript %}
 <div style="text-align: center;">
                     {% for item in page.manuscript %}
-                    <a href="{{item.url}}" alt="download sermon manuscript" class="button large" ><i class="fa fa-play"></i>Download Sermon Manuscript</a>
+                    <a href="{{item.url}}" alt="download sermon manuscript" class="button large" ><i class="fa fa-file-pdf-o"></i> Download Sermon Manuscript</a>
                     {% endfor %}
     </div><!--/empty div for centering-->
 {% endif %}
