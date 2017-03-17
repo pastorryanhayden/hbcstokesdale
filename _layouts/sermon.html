@@ -32,99 +32,118 @@
   <div class="main-content">
 
    <div class="singleSermonHeader">
-            {% assign sermon_series = site.series | where: "slug", page.sery %}   
-            {% assign speaker = site.speakers | where: "slug", page.speaker %}   
-            {% for sery in sermon_series %}
-                     <img class="singleSermonHeader__mainImage" src="{{ sery.featured_image }}" alt="{{page.sermon_name}}">
-            {% endfor %}
-   
+    {% if page.series_featured_image %}
+    {% for img in page.series_featured_image %}
+    <img class="singleSermonHeader__mainImage" src="{{ img.url }}" alt="{{page.title}}">
+    {% endfor %}
+    {% else %}
+    <img class="singleSermonHeader__mainImage" src="{{site.url}}/{{site.data.settings.main_sermon_image}}" alt="Series Graphic">
+    {% endif %}
+    
     <div class="singleSermonHeader__teaser">
     <div class="singleSermonHeader__title">
-        <h3>{{page.sermon_name}}</h3>
+        <h3>{{page.title}}</h3>
          <ul class="action__buttons">
-                    {% if page.sermon_path %}
-                    <li><a href="{{page.sermon_path}}" alt="play"><i class="fa fa-play"></i></a></li>
+                    {% if page.sermon_mp3 %}
+                    {% for item in page.sermon_mp3 %}
+                    <li><a href="{{item.url}}" alt="play"><i class="fa fa-play"></i></a></li>
+                    {% endfor %}
                     {% endif %}
-                    {% if page.handout_path %}
-                    <li><a href="{{page.handout_path}}" alt="handout"><i class="fa fa-file-pdf-o"></i></a></li>
+                    {% if page.handout %}
+                    {% for item in page.manuscript %}
+                    <li><a href="{{item.manuscript}}" alt="handout"><i class="fa fa-page-pdf"></i></a></li>
+                    {% endfor %}
                     {% endif %}
-                    {% if page.slides_path %}
-                    <li><a href="{{page.slides_path}}" alt="slides"><i class="fa fa-file-powerpoint-o"></i></a></li>
+                    {% if page.slides %}
+                    {% for item in page.slides %}
+                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-projection-screen"></i></a></li>
+                    {% endfor %}
                     {% endif %}
                 </ul><!--/action__buttons-->
         </div><!--/sermonslistItem__title-->
         <ul class="singleSermonHeader__tagline">
-         <li><i class="fi-calendar"></i> {{page.date}}</li>
-                <li><i class="fa fa-calendar"></i> {{page.preached_date | date: "%b %d, %y" }}</li>
-                <li><i class="fa fa-clock"></i> {{page.service}}</li>
-                <li><i class="fa fa-user"></i> {% for sp in speaker %}{{sp.name}}{%endfor%}</li>
+         <li><i class="fa fa-calendar"></i> {{page.date}}</li>
+                <li><i class="fa fa-clock-o"></i> {{page.service}}</li>
+                <li><i class="fa fa-user"></i> {{page.speaker_name}}</li>
                 <li><i class="fa fa-book"></i> {{page.bible_text}}</li>
         </ul>
-        {% if page.sermon_path %}
-                
+        {% if page.sermon_mp3 %}
+                {% for item in page.sermon_mp3 %}
                 <audio class="sermonslistPlayer" controls>
-                    <source src="{{page.sermon_path}}" type="audio/mpeg">
+                    <source src="{{item.url}}" type="audio/mpeg">
                     Your browser does not support the audio element.
                     </audio>
-                <a href="{{page.sermon_path}}" class="button warning" target="blank" download><i class="fi-download"></i> Download</a>
-                
+                <a href="{{item.url}}" class="button warning" target="blank" download><i class="fa fa-download"></i> Download</a>
+                {% endfor %}
                 {% endif %}
     </div>
-</div>
-{% if page.sermon_content_markdown %}
+</div> 
 <div class="singleSermonContent">
-    {{ page.sermon_content_markdown | markdownify }}
- 
-</div><!--/singleSermonContent-->
+{% if page.manuscript %}
+<div style="text-align: center;">
+                    {% for item in page.manuscript %}
+                    <a href="{{item.url}}" alt="download sermon manuscript" class="button large" ><i class="fa fa-play"></i>Download Sermon Manuscript</a>
+                    {% endfor %}
+    </div><!--/empty div for centering-->
 {% endif %}
+{% if page.body_content %}
 
+    {{ page.body_content | markdownify }}
+ 
+
+{% endif %}
+</div><!--/singleSermonContent-->
  <div class="sermonslistContent singleSermonPage">
-  {% assign sermons = site.sermons |where: "sery", page.sery %}
-   {% if sermons %}
+
    <div class="sermonslistContent__MainList">
         <h2>More Sermons From This Series:</h2>
-    {% for sermon in sermons %}
-    {% if sermon.sermon_name != page.sermon_name %}
+    {% for sermon in site.data.sermons %}
+      {% if sermon.series_title[0] == page.series_title[0] %}
         <div class="sermonslistItem">
             <div class="sermonslistItem__teaser">
             <div class="sermonslistItem__title">
-                <h3><a href="{{ sermon.url }}">{{sermon.sermon_name}}</a></h3>
+                <h3><a href="{{ sermon.title | datapage_url: 'sermons' | prepend: site.baseurl | prepend: site.url }}">{{sermon.title}}</a></h3>
                 <ul class="action__buttons">
-                    {% if sermon.sermon_path %}
-                    <li><a href="{{sermon.sermon_path}}" alt="play"><i class="fa fa-play"></i></a></li>
+                    {% if sermon.sermon_mp3 %}
+                    {% for item in sermon.sermon_mp3 %}
+                    <li><a href="{{item.url}}" alt="play"><i class="fa fa-play"></i></a></li>
+                    {% endfor %}
                     {% endif %}
-                    {% if sermon.handout_path %}
-                    <li><a href="{{sermon.handout_path}}" alt="handout"><i class="fa fa-file-pdf-o"></i></a></li>
+                    {% if sermon.handout %}
+                    {% for item in sermon.handout %}
+                    <li><a href="{{item.url}}" alt="handout"><i class="fa fa-page-pdf"></i></a></li>
+                    {% endfor %}
                     {% endif %}
-                    {% if sermon.slides_path %}
-                    <li><a href="{{sermon.slides_path}}" alt="slides"><i class="fa fa-file-powerpoint-o"></i></a></li>
+                    {% if sermon.slides %}
+                    {% for item in sermon.slides %}
+                    <li><a href="{{item.url}}" alt="slides"><i class="fa fa-projection-screen"></i></a></li>
+                    {% endfor %}
                     {% endif %}
                 </ul><!--/action__buttons-->
                 </div><!--/sermonslistItem__title-->
                 <ul class="sermonslistItem__tagline">
-                <li><i class="fa fa-calendar"></i> {{sermon.preached_date | date: "%b %d, %y" }}</li>
-                <li><i class="fa fa-clock"></i> {{sermon.service}}</li>
-                <li><i class="fa fa-user"></i> {% for sp in speaker %}{{sp.name}}{%endfor%}</li>
+                <li><i class="fa fa-calendar"></i> {{sermon.date}}</li>
+                <li><i class="fa fa-clock-o"></i> {{sermon.service}}</li>
+                <li><i class="fa fa-user"></i> {{sermon.speaker_name}}</li>
                 <li><i class="fa fa-book"></i> {{sermon.bible_text}}</li>
                 </ul>
-                <p class="sermonslistItem__description">{{sermon.sermon_content_markdown |truncatewords: 15}}</p>
-                {% if sermon.sermon_path %}
+                <p class="sermonslistItem__description">{{sermon.body_content | truncate: 140 }}</p>
+                {% if sermon.sermon_mp3 %}
+                {% for item in sermon.sermon_mp3 %}
                 <audio class="sermonslistPlayer" controls>
-                    <source src="{{sermon.sermon_path}}" type="audio/mpeg">
+                    <source src="{{item.url}}" type="audio/mpeg">
                     Your browser does not support the audio element.
                     </audio>
-                <a href="{{sermon.sermon_path}}" class="button secondary" target="blank" download><i class="fa fa-download"></i> Download</a>
-
+                <a href="{{item.url}}" class="button secondary" target="blank" download><i class="fa fa-download"></i> Download</a>
+                {% endfor %}
                 {% endif %}
-                <a href="{{ sermon.url }}" class="button" >View Sermon</a>
+                <a href="{{ sermon.title | datapage_url: 'sermons' | prepend: site.baseurl | prepend: site.url }}" class="button" >View Sermon</a>
             </div><!--/sermonslistItem__teaser-->
         </div><!--/sermonslistItem-->
-      {% endif %}
+        {% endif %}
      {% endfor %}
     </div><!--/end main list-->
-    {% endif %}
 </div><!--/sermonslistContent-->
-  
   </div><!--/main-content-->
 
   {% include footer.html %}

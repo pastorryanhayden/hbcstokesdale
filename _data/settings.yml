@@ -14,7 +14,7 @@ State: NC
 Zip: '27357'
 main_blog_image: /uploads/1.jpg
 main_sermon_image: /uploads/2.jpg
-default_calendar_image: /uploads/hartwell.jpg
+default_calendar_image: /uploads/3.jpg
 services:
   - name: Sunday School
     time:
