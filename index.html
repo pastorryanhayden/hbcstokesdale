@@ -4,7 +4,6 @@ first_header_image: /uploads/IMG_2567.jpeg
 second_header_image: uploads/IMG_2573.jpeg
 third_header_image: uploads/header3.jpeg
 gallery:
-  - gallery_image: uploads/IMG_0392.jpeg
   - gallery_image: uploads/IMG_0395.jpeg
   - gallery_image: uploads/IMG_0425.jpeg
   - gallery_image: uploads/IMG_0444.jpeg
@@ -93,7 +92,7 @@ plan_a_visit:
   <div class="photos">
   <div class="photos-inner" id="sqr-gallery">
      {% for img in page.gallery limit: 12 %}
-        <div class="photo"><a href="#" data-featherlight="{{img.gallery_image}}" style="background: url({{img.gallery_image }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
+        <div class="photo"><a href="#" data-featherlight="{{img.gallery_image}} " style="background: url({{img.gallery_image | replace: '.', '_thumb.' }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
       {% endfor %}
   </div><!--/photos-inner-->
 </div><!--/gallery-->
