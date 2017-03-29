@@ -14,7 +14,7 @@ gem "json"
 gem 'airtable'
 gem 'bigdecimal'
 gem 'activesupport'
-
+gem 'rmagick'
 
 
 
