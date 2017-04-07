@@ -1,9 +1,7 @@
-title:
+title: Sample 5
 categories:
-date:
+  - 'yes'
+date: 2017-04-06 00:00:00
 photos:
-    -   image:
-        caption:
-
-
-
+  - image: /uploads/cat.png
+    caption: 'no'
