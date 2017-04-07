@@ -62,6 +62,8 @@ collections:
     _hide_content: true
 
 
+uploads_dir: /thisdoesntexistyet/
+
 author:
 - Pastor Keith Taylor
 - Pastor Stephen Richardson
