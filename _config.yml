@@ -57,6 +57,9 @@ collections:
   ministry_leaders:
     output: false
     _hide_content: true
+  galleries:
+    output: false
+    _hide_content: true
 
 
 author:
