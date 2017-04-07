@@ -2,8 +2,5 @@ title:
 categories:
 date:
 photos:
-    -   image: cat.png
-        caption:
-
-
-
+  - image: /uploads/cat.png
+    caption:
