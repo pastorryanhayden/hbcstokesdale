@@ -3,8 +3,7 @@ title:
 categories:
 date:
 photos:
-    -
-        image_path:
+    -   image:
         caption:
 ---
 
