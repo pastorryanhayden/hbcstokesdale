@@ -1,5 +1,5 @@
 ---
-name: Sample Ministry
+name: Trial Life USA
 published: true
 show_on_home_page: true
 exclude_from_menus: true
@@ -11,3 +11,5 @@ header_image:
 logo_image:
 ministry_leader:
 ---
+
+
