@@ -12,4 +12,4 @@ logo_image:
 ministry_leader:
 ---
 
-
+Troop 0249 meets every Tuesday Night at 7:00.
