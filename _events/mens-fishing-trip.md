@@ -6,7 +6,7 @@ all_day: false
 location: 'Boone, NC'
 description_markdown:
 ministry:
-featured_image: /thisdoesntexistyet/IMG_0822.JPG
+featured_image:
 page_markdown:
 layout: single_event
 ---
