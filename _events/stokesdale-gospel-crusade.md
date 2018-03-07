@@ -1,9 +1,9 @@
 ---
 published: true
-start_at:
-end_at:
-all_day: false
-location:
+start_at: 2018-10-07 00:00:00
+end_at: 2018-10-12 00:00:00
+all_day: true
+location: To Be Determined...
 description_markdown:
 ministry:
 featured_image:
