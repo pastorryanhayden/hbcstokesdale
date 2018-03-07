@@ -1,9 +1,9 @@
 ---
 published: true
-start_at: 2018-04-21 09:00:00
-end_at: 2018-04-21 12:00:00
+start_at: 2018-05-10 08:00:00
+end_at: 2018-05-12 12:00:00
 all_day: false
-location: '8430 Southward Rd Stokesdale, NC 27357'
+location: 'Boone, NC'
 description_markdown:
 ministry:
 featured_image:
