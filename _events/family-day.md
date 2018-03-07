@@ -1,8 +1,8 @@
 ---
 published: true
-start_at:
+start_at: 2018-05-13 11:00:00
 end_at:
-all_day: false
+all_day: true
 location:
 description_markdown:
 ministry:
